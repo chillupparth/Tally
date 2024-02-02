@@ -20,8 +20,8 @@
   --fs-300: 0.875rem;
   --fs-400: 1rem;
   --fs-450: 1.2rem;
-  --fs-500: 1.875rem;
-  --fs-600: 2.5rem;
+  --fs-500: 2rem;
+  --fs-600: 2.75rem;
 
   --size-100: 0.25rem;
   --size-200: 0.5rem;
@@ -180,7 +180,7 @@ svg {
 
 .even-columns {
   display: grid;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 @media (min-width: 50em) {
@@ -236,10 +236,6 @@ button:focus-visible {
   background-color: var(--clr-primary-200);
 }
 
-/* section {
-  position: relative;
-} */
-
 header {
   padding-block: var(--size-400);
   border-bottom: solid hsla(228, 39%, 23%, 0.267) thin;
@@ -289,21 +285,17 @@ header img {
   max-width: 300px;
 }
 
-.testimonials {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(4, 1fr);
+.margin-top-100 {
+  margin-top: 1em;
 }
-
-:where(.flow :not(:first-child)) {
-  margin-top: var(--flow-spacer, 3em);
+.margin-top-200 {
+  margin-top: 2em;
 }
-
 .margin-top-200 {
   margin-top: 2em;
 }
 .margin-bottom-100 {
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 .margin-bottom-200 {
   margin-bottom: 2em;
@@ -333,8 +325,6 @@ select {
   margin-block: 0.7rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-
-  box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
 .questionaire button {
@@ -376,6 +366,21 @@ select {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 1.8em 0.6em hsla(0, 0%, 75%, 0.5);
+}
+
+@media (width < 50em) {
+  .questionaire {
+    width: calc(95% - 1em);
+  }
+  .hero-left {
+    padding-block: 2rem;
+  }
+  .padding-block-900 {
+    padding-block: 3rem;
+  }
+  .margin-top-200 {
+    margin-top: 1.5em;
+  }
 }
 
 .questionaire:n .questionaire h2 {
@@ -446,7 +451,7 @@ select {
 
 .testimonials {
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 @media (min-width: 50em) {
@@ -458,7 +463,7 @@ select {
 
 .testimonial-card {
   border-radius: 0.5rem;
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: var(--clr-neutral-100);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -490,9 +495,16 @@ select {
 
 .features {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  gap: 2.5rem;
 }
+
+@media (min-width: 50em) {
+  .features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .feature-card {
   display: flex;
   flex-direction: row;
