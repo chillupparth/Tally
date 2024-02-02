@@ -190,6 +190,10 @@ svg {
   }
 }
 
+.padding-top-700 {
+  padding-top: var(--size-700);
+}
+
 .padding-top-900 {
   padding-top: var(--size-900);
 }
