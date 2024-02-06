@@ -397,8 +397,8 @@ select {
   }
 }
 
-.questionaire:n .questionaire h2 {
-  margin-bottom: 5px;
+.questionaire h2 {
+  margin-bottom: 6px;
 }
 
 .hero {
@@ -617,4 +617,9 @@ footer a {
 
 footer a:hover {
   color: var(--clr-primary-400);
+}
+
+.call-space {
+  margin-left: 10px;
+  margin-right: 10px;
 }
