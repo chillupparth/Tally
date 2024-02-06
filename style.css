@@ -229,11 +229,13 @@ button {
   color: var(--clr-neutral-100);
   background-color: var(--clr-primary-400);
   box-shadow: 0 1.2em 1em -1em var(--clr-primary-400);
+  transition: 0.2s;
 }
 
 button:hover,
 button:focus-visible {
-  background-color: var(--clr-primary-200);
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-400);
 }
 
 header {
@@ -337,9 +339,11 @@ select {
   border-radius: 100vmax;
   padding: 15px 25px;
   cursor: pointer;
+  transition: 0.2s;
 }
 .questionaire button:hover {
-  background-color: var(--clr-primary-200);
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-400);
 }
 
 .questionaire .button-div {
@@ -368,6 +372,12 @@ select {
   box-shadow: 0 0 1.8em 0.6em hsla(0, 0%, 75%, 0.5);
 }
 
+.brand-container {
+  display: grid;
+  gap: 1.8rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 @media (width < 50em) {
   .questionaire {
     width: calc(95% - 1em);
@@ -380,6 +390,10 @@ select {
   }
   .margin-top-200 {
     margin-top: 1.5em;
+  }
+  .brand-container {
+    gap: 1.2rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -441,12 +455,6 @@ select {
 
 .card h3 {
   padding-bottom: var(--size-200);
-}
-
-.brand-container {
-  display: grid;
-  gap: 1.8rem;
-  grid-auto-flow: column;
 }
 
 .testimonials {
