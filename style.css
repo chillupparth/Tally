@@ -197,18 +197,23 @@ svg {
 .padding-top-900 {
   padding-top: var(--size-900);
 }
+.padding-bottom-500 {
+  padding-bottom: 2rem;
+}
+.padding-bottom-900 {
+  padding-bottom: 8rem;
+}
 .padding-bottom-1100 {
   padding-bottom: 10rem;
+}
+.padding-block-700 {
+  padding-block: var(--size-700);
 }
 .padding-block-900 {
   padding-block: var(--size-900);
 }
 .padding-block-1000 {
   padding-block: var(--size-1000);
-}
-
-.padding-block-700 {
-  padding-block: var(--size-700);
 }
 
 body {
@@ -622,4 +627,56 @@ footer a:hover {
 .call-space {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.scroller {
+  max-width: 1100px;
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 15%,
+    white 85%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
 }
