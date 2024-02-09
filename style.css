@@ -247,9 +247,11 @@ header {
   padding-block: var(--size-400);
   border-bottom: solid hsla(228, 39%, 23%, 0.267) thin;
   background-color: white;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 10;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 .nav-wrapper {
   display: flex;
@@ -377,36 +379,12 @@ select {
   box-shadow: 0 0 1.8em 0.6em hsla(0, 0%, 75%, 0.5);
 }
 
-.brand-container {
-  display: grid;
-  gap: 1.8rem;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-@media (width < 50em) {
-  .questionaire {
-    width: calc(95% - 1em);
-  }
-  .hero-left {
-    padding-block: 2rem;
-  }
-  .padding-block-900 {
-    padding-block: 3rem;
-  }
-  .margin-top-200 {
-    margin-top: 1.5em;
-  }
-  .brand-container {
-    gap: 1.2rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .questionaire h2 {
   margin-bottom: 6px;
 }
 
 .hero {
+  padding-top: 10rem;
   padding-bottom: 10rem;
   position: relative;
 }
@@ -462,25 +440,47 @@ select {
   padding-bottom: var(--size-200);
 }
 
-.testimonials {
-  display: grid;
-  gap: 1.5rem;
+.container ::-webkit-scrollbar {
+  height: 6px;
+}
+.container ::-webkit-scrollbar-track {
+  background-color: var(--clr-neutral-400);
+}
+.container ::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 15px;
 }
 
-@media (min-width: 50em) {
-  .testimonials {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
+.testimonials {
+  padding-block: 2rem;
+  display: flex;
+  gap: 10rem;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
 }
 
 .testimonial-card {
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  scroll-snap-align: center;
   border-radius: 0.5rem;
+  margin: 0 auto;
   padding: 1.5rem;
   background-color: var(--clr-neutral-100);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.testimonial-card:first-of-type {
+  margin-left: 10rem;
+}
 
+.testimonial-card:last-of-type {
+  margin-right: 10rem;
+}
 .testimonial-card p:first-of-type {
   font-style: italic;
   margin-bottom: var(--size-400);
@@ -678,5 +678,46 @@ footer a:hover {
 @keyframes scroll {
   to {
     transform: translate(calc(-50% - 0.5rem));
+  }
+}
+.call-footer {
+  background-color: var(--clr-neutral-100);
+  padding-block: 1.1rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  a {
+    text-decoration: none;
+    padding: 1rem 5rem;
+    color: var(--clr-primary-400);
+  }
+}
+
+@media (width > 50em) {
+  .call-footer {
+    display: none;
+  }
+}
+
+@media (width < 50em) {
+  .questionaire {
+    width: calc(95% - 1em);
+  }
+  .hero-left {
+    padding-block: 2rem;
+  }
+  .padding-block-900 {
+    padding-block: 3rem;
+  }
+  .margin-top-200 {
+    margin-top: 1.5em;
+  }
+  .hero {
+    padding-top: 8rem;
+  }
+  .call {
+    display: none;
   }
 }

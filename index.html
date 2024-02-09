@@ -3,28 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js "></script>
+    <link
+      href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css "
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
     <title>Krisha Soft Solutions</title>
   </head>
   <body>
-    <script type="module" src="main.js"></script>
     <header>
       <div class="container">
         <div class="nav-wrapper">
           <a href="#"><img src="assets/TallyLogo.png" alt="Tally" /></a>
           <nav>
             <ul role="list" class="nav-list">
-              <li>
+              <li class="call">
                 <a href="tel:+91 93726 99231">Call</a>
               </li>
               <li>
-                <a href="mailto:sales@krishasoftsolutions.in">E-mail</a>
+                <a href="mailto:sales@krishasoftsolutions.in">Mail Us</a>
               </li>
             </ul>
           </nav>
@@ -33,7 +44,7 @@
     </header>
 
     <main>
-      <section class="padding-block-900 hero bg-primary-400 text-neutral-100">
+      <section class="hero bg-primary-400 text-neutral-100">
         <div class="container">
           <div class="even-columns">
             <div class="hero-left">
@@ -97,7 +108,9 @@
                     </select>
                   </div>
                   <div class="button-div">
-                    <button type="submit">Access Pricing</button>
+                    <button type="submit" onclick="popUp()">
+                      Access Pricing
+                    </button>
                   </div>
                 </form>
               </div>
@@ -269,11 +282,12 @@
             data-speed="slow"
           >
             <div class="scroller__inner">
-              <img src="assets/logo5new.png" alt="Brand Logo" />
-              <img src="assets/logo4new.png" alt="Brand Logo" />
-              <img src="assets/logo1new.png" alt="Brand Logo" />
-              <img src="assets/logo2new.png" alt="Brand Logo" />
-              <img src="assets/logo3new.png" alt="Brand Logo" />
+              <img src="assets/logo2.png" alt="Brand Logo" />
+              <img src="assets/logo3.png" alt="Brand Logo" />
+              <img src="assets/logo4.png" alt="Brand Logo" />
+              <img src="assets/logo5.jpg" alt="Brand Logo" />
+              <img src="assets/logo1.png" alt="Brand Logo" />
+              <img src="assets/logo6.png" alt="Brand Logo" />
             </div>
           </div>
         </div>
@@ -294,39 +308,56 @@
 
       <section class="padding-block-900 bg-neutral-400">
         <div class="container">
-          <h3 class="fw-bold fs-500 text-align padding-bottom-500">
+          <h3
+            class="fw-bold fs-500 text-align padding-bottom-500 "
+          >
             What they say about us
           </h3>
-          <div class="testimonials margin-top-200 text-align">
-            <div class="testimonial-card">
-              <p>
-                "I recently migrated my Tally operations to a cloud-based
-                service, and the experience has been nothing short of
-                phenomenal. The transition was smooth, and I've witnessed a
-                remarkable improvement in efficiency and accessibility"
-              </p>
-              <p class="fw-semi-bold fs-450">Ms.Laxmi Raut</p>
-              <p>Senior Accounts Manager, AGENCY09</p>
-            </div>
-            <div class="testimonial-card">
-              <p>
-                “Earlier we were using the default Tally Synchronisation
-                features for two locations then it was having some issues so
-                working time was wasted then we bought Tally on Cloud services
-                and after that our work is running smoothly”
-              </p>
-              <p class="fw-semi-bold fs-450">Mr.Lalit Rathod</p>
-              <p>Owner, Shree Marketing</p>
-            </div>
-            <div class="testimonial-card">
-              <p>
-                “We are highly satisfied with the support services provided by
-                KRISHA SOFT SOLUTIONS. Their support system promptly addresses
-                our needs, even on an urgent basis and outside regular office
-                hours. We express our sincere gratitude. Thank you very much.”
-              </p>
-              <p class="fw-semi-bold fs-450">Mr.Hitesh Gala</p>
-              <p>Owner, Deepali Traders</p>
+          
+            <div class="testimonials">
+              <div class="testimonial-card">
+                <p>
+                  "I recently migrated my Tally operations to a cloud-based
+                  service, and the experience has been nothing short of
+                  phenomenal. The transition was smooth, and I've witnessed a
+                  remarkable improvement in efficiency and accessibility"
+                </p>
+                <p class="fw-semi-bold fs-450">Ms.Laxmi Raut</p>
+                <p>Senior Accounts Manager, AGENCY09</p>
+              </div>
+              <div class="testimonial-card">
+                <p>
+                  “Earlier we were using the default Tally Synchronisation
+                  features for two locations then it was having some issues so
+                  working time was wasted then we bought Tally on Cloud services
+                  and after that our work is running smoothly”
+                </p>
+                <p class="fw-semi-bold fs-450">Mr.Lalit Rathod</p>
+                <p>Owner, Shree Marketing</p>
+              </div>
+              <div class="testimonial-card">
+                <p>
+                  “We are highly satisfied with the support services provided by
+                  KRISHA SOFT SOLUTIONS. Their support system promptly addresses
+                  our needs, even on an urgent basis and outside regular office
+                  hours. We express our sincere gratitude. Thank you very much.”
+                </p>
+                <p class="fw-semi-bold fs-450">Mr.Hitesh Gala</p>
+                <p>Owner, Deepali Traders</p>
+              </div>
+              <div class="testimonial-card">
+                <p>
+                  “I have been using Tally Software for the past two
+                  years, and Krisha Soft Solutions has been
+                  providing us with support services. They have
+                  assigned a dedicated engineer specifically for
+                  our needs. If we ever need assistance, we can
+                  easily contact them and receive immediate
+                  support.”
+                </p>
+                <p class="fw-semi-bold fs-450">Mr.Suresh Mali</p>
+                <p>Owner, CONSUME NX</p>
+              </div>
             </div>
           </div>
         </div>
@@ -436,7 +467,7 @@
       </section>
     </main>
 
-    <footer class="padding-block-700 bg-neutral-400">
+    <footer class="padding-top-700 bg-neutral-400">
       <div class="container">
         <div class="even-columns">
           <div>
@@ -471,22 +502,35 @@
               <form action="">
                 <div>
                   <select name="profile" id="profile">
-                    <option value="business">Business Owner</option>
-                    <option value="student">Student</option>
-                    <option value="other">Other</option>
+                    <option value="BusinessOwner">Business Owner</option>
+                    <option value="CA">C.A.</option>
+                    <option value="Accountant">Accountant</option>
+                    <option value="TaxConsultant">Tax Consultant</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
                 <div>
-                  <input type="text" name="fname" placeholder="Full Name*" />
+                  <input
+                    type="text"
+                    name="fname"
+                    placeholder="Full Name*"
+                    required
+                  />
                 </div>
                 <div>
-                  <input type="email" name="email" placeholder="Email*" />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email*"
+                    required
+                  />
                 </div>
                 <div>
                   <input
                     type="text"
                     name="phoeNumber"
                     placeholder="Phone Number*"
+                    required
                   />
                 </div>
                 <div>
@@ -501,16 +545,27 @@
                   </select>
                 </div>
                 <div class="button-div">
-                  <button>Access Pricing</button>
+                  <button onclick="popUp()">Access Pricing</button>
                 </div>
               </form>
             </div>
           </div>
         </div>
-        <div class="padding-top-900 text-align">
+        <div class="padding-top-900 text-align padding-bottom-500">
           <p>&#169; 2024</p>
         </div>
       </div>
+      <div class="call-footer"><a href="tel:+91 8928840447">Call Now</a></div>
     </footer>
+    <script type="module" src="main.js"></script>
+    <script>
+      function popUp() {
+        Swal.fire({
+          title: "Thank You!",
+          text: "Your details have been successfully submitted!",
+          icon: "success",
+        });
+      }
+    </script>
   </body>
 </html>
