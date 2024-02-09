@@ -291,7 +291,8 @@ header img {
 }
 
 .benefit-icon img {
-  max-width: 300px;
+  max-width: 250px;
+  object-fit: contain;
 }
 
 .margin-top-100 {
@@ -396,11 +397,8 @@ select {
 .benefit-p {
   margin-left: 20px;
 }
-.benefit-left img {
+.benefit-text img {
   max-width: 50px;
-}
-.benefit-left h2 {
-  margin-bottom: 3rem;
 }
 
 .active-numbers {
@@ -695,6 +693,12 @@ footer a:hover {
   }
 }
 
+.three-col {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 25% 1fr;
+}
+
 @media (width > 50em) {
   .call-footer {
     display: none;
@@ -719,5 +723,11 @@ footer a:hover {
   }
   .call {
     display: none;
+  }
+  .three-col {
+    grid-template-columns: 1fr;
+  }
+  .benefit-icon img {
+    max-width: 200px;
   }
 }
