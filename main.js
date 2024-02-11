@@ -19,3 +19,28 @@ function addAnimation() {
         });
     });
 }
+
+const initSlider = () => {
+    const slideButton = document.querySelectorAll(".slide-buttons");
+    const testimonial = document.querySelector(".testimonials");
+    const maxScrollLeft = testimonial.scrollWidth - testimonial.clientWidth - 160;
+
+    slideButton.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-card" ? -1 : 1;
+            const scrollAmount = testimonial.clientWidth * direction;
+            testimonial.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        })
+    })
+
+    const handleSlideButtons = () => {
+        slideButton[0].style.display = testimonial.scrollLeft <= 160 ? "none" : "block";
+        slideButton[1].style.display = testimonial.scrollLeft >= maxScrollLeft ? "none" : "block";
+    }
+
+    testimonial.addEventListener("scroll", () => {
+        handleSlideButtons();
+    })
+}
+
+window.addEventListener("load", initSlider);

@@ -9,18 +9,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js "></script>
-    <link
-      href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css "
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <link rel="stylesheet" href="style.css" />
     <title>Krisha Soft Solutions</title>
   </head>
@@ -31,11 +19,19 @@
           <a href="#"><img src="assets/TallyLogo.png" alt="Tally" /></a>
           <nav>
             <ul role="list" class="nav-list">
-              <li class="call">
-                <a href="tel:+91 93726 99231">Call</a>
+              <li class="call fw-semi-bold">
+                <a href="tel:+91 93726 99231">9372699231</a>
               </li>
-              <li>
-                <a href="mailto:sales@krishasoftsolutions.in">Mail Us</a>
+              <li class="call fw-semi-bold">
+                <a href="tel:+91 89288 40447">8928840447</a>
+              </li>
+              <li class="mail-big fw-semi-bold">
+                <a href="mailto:krishasoftsolutions@gmail.com"
+                  >krishasoftsolutions@gmail.com</a
+                >
+              </li>
+              <li class="mail-small fw-semi-bold">
+                <a href="mailto:krishasoftsolutions@gmail.com">Mail Us</a>
               </li>
             </ul>
           </nav>
@@ -62,7 +58,7 @@
               <div class="questionaire">
                 <h2 class="fw-bold fs-450">Fill the form</h2>
                 <p class="fw-bold fs-450">I am</p>
-                <form action="">
+                <form>
                   <div>
                     <select name="profile" id="profile">
                       <option value="BusinessOwner">Business Owner</option>
@@ -75,7 +71,7 @@
                   <div>
                     <input
                       type="text"
-                      name="fname"
+                      name="FullName"
                       placeholder="Full Name*"
                       required
                     />
@@ -83,7 +79,7 @@
                   <div>
                     <input
                       type="email"
-                      name="email"
+                      name="Email"
                       placeholder="Email*"
                       required
                     />
@@ -91,26 +87,24 @@
                   <div>
                     <input
                       type="text"
-                      name="phoeNumber"
+                      name="PhoneNumber"
                       placeholder="Phone Number*"
                       required
                     />
                   </div>
                   <div>
-                    <select name="users" id="users">
+                    <select name="Users" id="users">
                       <option value="">Number of users</option>
                       <option value="1">1</option>
-                      <option value="2to5">2-5</option>
-                      <option value="6to10">6-10</option>
-                      <option value="10to24">10-24</option>
+                      <option value="2 to 5">2-5</option>
+                      <option value="6 to 10">6-10</option>
+                      <option value="10 to 24">10-24</option>
                       <option value="25+">25+</option>
                       <option value="50+">50+</option>
                     </select>
                   </div>
                   <div class="button-div">
-                    <button type="submit" onclick="popUp()">
-                      Access Pricing
-                    </button>
+                    <button type="submit">Access Pricing</button>
                   </div>
                 </form>
               </div>
@@ -127,80 +121,80 @@
             Benefits of Tally on cloud
           </h2>
           <div class="three-col margin-bottom-200">
-              <div class="benefit-text">
-                <div class="margin-top-200 flex">
-                  <img src="assets/central-database-53.png" alt="icon" />
-                  <p class="benefit-p">
-                    Anytime, Anywhere, Any Device: Centralised Data Access
-                    Simplified
-                  </p>
-                </div>
-                <div class="margin-top-200 flex">
-                  <img src="assets/2 Automate Data backup.svg" alt="icon" />
-                  <p class="benefit-p">Automated Data Backup Solutions</p>
-                </div>
-                <div class="margin-top-200 flex">
-                  <img src="assets/3 Analysis.svg" alt="icon" />
-                  <p class="benefit-p">
-                    Improving the Simplicity and Efficiency of Planning,
-                    Budgeting, Forecasting, and Analysis
-                  </p>
-                </div>
-                
-                <div class="margin-top-200 flex">
-                  <img src="assets/4 data exchange.svg" alt="icon" />
-                  <p class="benefit-p">
-                    Secure Data Exchange Strategies
-                  </p>
-                </div>
-                <div class="margin-top-200 flex">
-                  <img src="assets/5 Performance.svg" alt="icon" />
-                  <p class="benefit-p">
-                    Automatic Performance Optimisation: Enhancing Efficiency
-                    with Ease
-                  </p>
-                </div>
+            <div class="benefit-text">
+              <div class="margin-top-200 flex">
+                <img src="assets/central-database-53.png" alt="icon" />
+                <p class="benefit-p">
+                  Anytime, Anywhere, Any Device: Centralised Data Access
+                  Simplified
+                </p>
               </div>
-              <div class="benefit-icon margin-top-200">
-                <img src="assets/linkedin-sales-solutions-B_DJO2-K22M-unsplash.jpg" alt="" />
+              <div class="margin-top-200 flex">
+                <img src="assets/2 Automate Data backup.svg" alt="icon" />
+                <p class="benefit-p">Automated Data Backup Solutions</p>
               </div>
-              <div class="benefit-text">
-                <div class="margin-top-200 flex">
-                  <img src="assets/6 customize cloud.svg" alt="icon" />
-                  <p class="benefit-p">
-                    Customisable Cloud Solutions with Built-in Scalability
-                  </p>
-                </div>
-                <div class="margin-top-200 flex">
-                  <img src="assets/7 dashboard.svg" alt="icon" />
-                  <p class="benefit-p">
-                    Engaging Control Panel: A Dynamic Alternative to Interactive
-                    Dashboards
-                  </p>
-                </div>
-                <div class="margin-top-200 flex">
-                  <img src="assets/8 Cost effective solution.svg" alt="icon" />
-                  <p class="benefit-p">
-                    Budget-Friendly Solutions: The Cost-Effective Nature of Tally on Cloud
-                  </p>
-                </div>
-                <div class="margin-top-200 flex">
-                  <img src="assets/9 Support.svg" alt="icon" />
-                  <p class="benefit-p">
-                    24/7 Customer Service 365 Days a Year
-                  </p>
-                </div>
-                <div class="margin-top-200 flex">
-                  <img src="assets/10 print.svg" alt="icon" />
-                  <p class="benefit-p">
-                    Printing Remotely: A Convenient Printing Solution
-                  </p>
-                </div>
+              <div class="margin-top-200 flex">
+                <img src="assets/3 Analysis.svg" alt="icon" />
+                <p class="benefit-p">
+                  Improving the Simplicity and Efficiency of Planning,
+                  Budgeting, Forecasting, and Analysis
+                </p>
+              </div>
+
+              <div class="margin-top-200 flex">
+                <img src="assets/4 data exchange.svg" alt="icon" />
+                <p class="benefit-p">Secure Data Exchange Strategies</p>
+              </div>
+              <div class="margin-top-200 flex">
+                <img src="assets/5 Performance.svg" alt="icon" />
+                <p class="benefit-p">
+                  Automatic Performance Optimisation: Enhancing Efficiency with
+                  Ease
+                </p>
               </div>
             </div>
-            <div class="text-align">
-              <button class="cta margin-top-200">Get Free Trail</button>
+            <div class="benefit-icon margin-top-200">
+              <img
+                src="assets/linkedin-sales-solutions-B_DJO2-K22M-unsplash.jpg"
+                alt=""
+              />
             </div>
+            <div class="benefit-text">
+              <div class="margin-top-200 flex">
+                <img src="assets/6 customize cloud.svg" alt="icon" />
+                <p class="benefit-p">
+                  Customisable Cloud Solutions with Built-in Scalability
+                </p>
+              </div>
+              <div class="margin-top-200 flex">
+                <img src="assets/7 dashboard.svg" alt="icon" />
+                <p class="benefit-p">
+                  Engaging Control Panel: A Dynamic Alternative to Interactive
+                  Dashboards
+                </p>
+              </div>
+              <div class="margin-top-200 flex">
+                <img src="assets/8 Cost effective solution.svg" alt="icon" />
+                <p class="benefit-p">
+                  Budget-Friendly Solutions: The Cost-Effective Nature of Tally
+                  on Cloud
+                </p>
+              </div>
+              <div class="margin-top-200 flex">
+                <img src="assets/9 Support.svg" alt="icon" />
+                <p class="benefit-p">24/7 Customer Service 365 Days a Year</p>
+              </div>
+              <div class="margin-top-200 flex">
+                <img src="assets/10 print.svg" alt="icon" />
+                <p class="benefit-p">
+                  Printing Remotely: A Convenient Printing Solution
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="text-align">
+            <button class="cta margin-top-200">Get Free Trail</button>
+          </div>
         </div>
         <div class="wave-1">
           <svg
@@ -338,12 +332,18 @@
 
       <section class="padding-block-900 bg-neutral-400">
         <div class="container">
-          <h3
-            class="fw-bold fs-500 text-align padding-bottom-500 "
-          >
+          <h3 class="fw-bold fs-500 text-align padding-bottom-500">
             What they say about us
           </h3>
-          
+          <div class="testimonial-wrapper">
+            <span>
+              <img
+                src="assets/left-arrow.png"
+                alt="prev-card"
+                id="prev-card"
+                class="slide-buttons"
+              />
+            </span>
             <div class="testimonials">
               <div class="testimonial-card">
                 <p>
@@ -377,18 +377,24 @@
               </div>
               <div class="testimonial-card">
                 <p>
-                  “I have been using Tally Software for the past two
-                  years, and Krisha Soft Solutions has been
-                  providing us with support services. They have
-                  assigned a dedicated engineer specifically for
-                  our needs. If we ever need assistance, we can
-                  easily contact them and receive immediate
-                  support.”
+                  “I have been using Tally Software for the past two years, and
+                  Krisha Soft Solutions has been providing us with support
+                  services. They have assigned a dedicated engineer specifically
+                  for our needs. If we ever need assistance, we can easily
+                  contact them and receive immediate support.”
                 </p>
                 <p class="fw-semi-bold fs-450">Mr.Suresh Mali</p>
                 <p>Owner, CONSUME NX</p>
               </div>
             </div>
+            <span>
+              <img
+                src="assets/right-arrow.png"
+                alt="next-card"
+                id="next-card"
+                class="slide-buttons"
+              />
+            </span>
           </div>
         </div>
       </section>
@@ -529,7 +535,7 @@
             <div class="questionaire">
               <h2 class="fw-bold fs-450">Ready, Steady, Begin!</h2>
               <p class="fw-bold fs-450">I am</p>
-              <form action="">
+              <form>
                 <div>
                   <select name="profile" id="profile">
                     <option value="BusinessOwner">Business Owner</option>
@@ -542,7 +548,7 @@
                 <div>
                   <input
                     type="text"
-                    name="fname"
+                    name="FullName"
                     placeholder="Full Name*"
                     required
                   />
@@ -550,7 +556,7 @@
                 <div>
                   <input
                     type="email"
-                    name="email"
+                    name="Email"
                     placeholder="Email*"
                     required
                   />
@@ -558,44 +564,35 @@
                 <div>
                   <input
                     type="text"
-                    name="phoeNumber"
+                    name="PhoneNumber"
                     placeholder="Phone Number*"
                     required
                   />
                 </div>
                 <div>
-                  <select name="users" id="users">
+                  <select name="Users" id="users">
                     <option value="">Number of users</option>
                     <option value="1">1</option>
-                    <option value="2to5">2-5</option>
-                    <option value="6to10">6-10</option>
-                    <option value="10to24">10-24</option>
+                    <option value="2 to 5">2-5</option>
+                    <option value="6 to 10">6-10</option>
+                    <option value="10 to 24">10-24</option>
                     <option value="25+">25+</option>
                     <option value="50+">50+</option>
                   </select>
                 </div>
                 <div class="button-div">
-                  <button onclick="popUp()">Access Pricing</button>
+                  <button>Access Pricing</button>
                 </div>
               </form>
             </div>
           </div>
         </div>
         <div class="padding-top-900 text-align padding-bottom-500">
-          <p>&#169; 2024</p>
+          <p>&#169; 2024 Krisha Soft Solutions</p>
         </div>
       </div>
       <div class="call-footer"><a href="tel:+91 8928840447">Call Now</a></div>
     </footer>
     <script type="module" src="main.js"></script>
-    <script>
-      function popUp() {
-        Swal.fire({
-          title: "Thank You!",
-          text: "Your details have been successfully submitted!",
-          icon: "success",
-        });
-      }
-    </script>
   </body>
 </html>
