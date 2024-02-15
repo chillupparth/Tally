@@ -54,7 +54,7 @@
                 fostering seamless collaboration and scalability.
               </p>
             </div>
-            <div class="questionaire-outer">
+            <div class="questionaire-outer" id="mainForm">
               <div class="questionaire">
                 <h2 class="fw-bold fs-450">Fill the form</h2>
                 <p class="fw-bold fs-450">I am</p>
@@ -107,7 +107,7 @@
                     </select>
                   </div>
                   <div class="button-div">
-                    <button type="submit">Access Pricing</button>
+                    <button type="submit" id="actionBtn">Access Pricing</button>
                   </div>
                 </form>
               </div>
@@ -195,7 +195,9 @@
             </div>
           </div>
           <div class="text-align">
-            <button class="cta margin-top-200">Get Free Trail</button>
+            <button class="cta margin-top-200" onclick="highlightForm()">
+              Get Free Trail
+            </button>
           </div>
         </div>
         <div class="wave-1">
@@ -473,7 +475,9 @@
             </div>
           </div> -->
           <div class="text-align">
-            <button class="cta margin-top-200">Start 7 Days Free Trail</button>
+            <button class="cta margin-top-200" onclick="highlightForm()">
+              Start 7 Days Free Trail
+            </button>
           </div>
         </div>
         <div class="wave-3">
@@ -599,5 +603,15 @@
       <div class="call-footer"><a href="tel:+91 8928840447">Call Now</a></div>
     </footer>
     <script type="module" src="main.js"></script>
+    <script>
+      function highlightForm() {
+        const position = document
+          .getElementById("mainForm")
+          .getBoundingClientRect();
+        const { x, y } = position;
+        document.getElementById("actionBtn").click();
+        window.scrollTo(x, y);
+      }
+    </script>
   </body>
 </html>
