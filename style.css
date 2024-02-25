@@ -245,7 +245,7 @@ button:focus-visible {
 }
 
 header {
-  padding-block: var(--size-400);
+  padding-block: 1.75rem;
   border-bottom: solid hsla(228, 39%, 23%, 0.267) thin;
   background-color: white;
   position: fixed;
