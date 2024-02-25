@@ -245,7 +245,7 @@ button:focus-visible {
 }
 
 header {
-  padding-block: 1.75rem;
+  padding-block: 1.55rem;
   border-bottom: solid hsla(228, 39%, 23%, 0.267) thin;
   background-color: white;
   position: fixed;
@@ -275,7 +275,7 @@ header {
 }
 
 header img {
-  max-width: 7.5rem;
+  max-width: 8.5rem;
 }
 
 .bubble-section {
